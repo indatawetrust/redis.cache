@@ -1,0 +1,30 @@
+{
+  "name": "redis.cache",
+  "version": "0.0.1",
+  "description": "simple and convenient variable caching with redis",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/indatawetrust/redis.cache.git"
+  },
+  "keywords": [
+    "redis",
+    "cache",
+    "promise"
+  ],
+  "author": "indatawetrust",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indatawetrust/redis.cache/issues"
+  },
+  "homepage": "https://github.com/indatawetrust/redis.cache#readme",
+  "devDependencies": {
+    "ava": "^0.25.0"
+  },
+  "dependencies": {
+    "redis": "^2.8.0"
+  }
+}
