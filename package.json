@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/indatawetrust/redis.cache.git"
+    "url": "git+https://github.com/indatawetrust/valuecache.git"
   },
   "keywords": [
     "redis",
@@ -18,9 +18,9 @@
   "author": "indatawetrust",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/indatawetrust/redis.cache/issues"
+    "url": "https://github.com/indatawetrust/valuecache/issues"
   },
-  "homepage": "https://github.com/indatawetrust/redis.cache#readme",
+  "homepage": "https://github.com/indatawetrust/valuecache#readme",
   "devDependencies": {
     "ava": "^0.25.0",
     "delay": "^2.0.0"
