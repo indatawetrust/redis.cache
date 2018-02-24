@@ -1,5 +1,6 @@
 import test from 'ava'
 import redisCache from './index'
+import delay from 'delay'
 
 const cache = redisCache()
 
@@ -60,5 +61,19 @@ test('test #5', async t => {
   t.is((await cache.get('item5')).b.c.d.e.f, true)
 
   t.is(await cache.del('item5'), true)
+
+})
+
+test('test #6', async t => {
+  
+  t.is(await cache.set('item6', { hello: "world" }, 5), true)
+
+  await delay(2000)
+
+  t.deepEqual(await cache.get('item6'), { hello: "world" })
+
+  await delay(3000)
+
+  t.is(await cache.get('item6'), null)
 
 })

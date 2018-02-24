@@ -1,8 +1,8 @@
 const redis = require("redis");
 
-module.exports = config => {
+module.exports = opts => {
 
-  client = redis.createClient(config)
+  client = redis.createClient(opts)
 
   const fn = {
 
@@ -15,21 +15,37 @@ module.exports = config => {
       }))
 
     },
-    set: (key, value, ttl = 60) => {
+    set: (key, value, ttl) => {
 
       return new Promise((resolve, reject) => {
 
         value = typeof value == "object" ? JSON.stringify(value) : value
 
-        client.setex(key, ttl, value, err => {
+        if (ttl) {
 
-          if (err) {
-            reject(new Error(err))
-          } else {
-            resolve(true)
-          }
+          client.setex(key, ttl, value, err => {
 
-        })
+            if (err) {
+              reject(new Error(err))
+            } else {
+              resolve(true)
+            }
+
+          })
+
+        } else {
+          
+           client.set(key, value, err => {
+
+            if (err) {
+              reject(new Error(err))
+            } else {
+              resolve(true)
+            }
+
+          })         
+
+        }
 
       })
 

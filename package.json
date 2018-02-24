@@ -1,5 +1,5 @@
 {
-  "name": "redis.cache",
+  "name": "valuecache",
   "version": "0.0.1",
   "description": "simple and convenient variable caching with redis",
   "main": "index.js",
@@ -22,7 +22,8 @@
   },
   "homepage": "https://github.com/indatawetrust/redis.cache#readme",
   "devDependencies": {
-    "ava": "^0.25.0"
+    "ava": "^0.25.0",
+    "delay": "^2.0.0"
   },
   "dependencies": {
     "redis": "^2.8.0"
