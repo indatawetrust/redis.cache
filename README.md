@@ -1,5 +1,4 @@
-# redis.cache
-simple and convenient variable caching with redis
+[![Build Status](https://travis-ci.org/indatawetrust/valuecache.svg?branch=master)](https://travis-ci.org/indatawetrust/valuecache)
 
 #### features
 - promise supports
