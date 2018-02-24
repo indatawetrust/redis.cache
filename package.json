@@ -1,6 +1,6 @@
 {
   "name": "valuecache",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "simple and convenient variable caching with redis",
   "main": "index.js",
   "scripts": {
