@@ -2,10 +2,10 @@ const redis = require("redis");
 
 module.exports = opts => {
 
-  client = redis.createClient(opts)
+  const client = redis.createClient(opts)
 
   const fn = {
-
+    client,
     arrayToPromise: (array, fn) => {
 
       return Promise.all(array.map(key => {
