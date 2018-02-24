@@ -8,7 +8,7 @@
 
 #### install
 ```
-npm i --save valuecache
+npm i --save valuecache@latest
 ```
 
 #### usage
@@ -38,7 +38,7 @@ const cache = valuecache({
   
   await cache.get(['foo', 'data'])
   
-  [{ "foo": "bar" }, "bar"]
+  // [{ "foo": "bar" }, "bar"]
   
   await cache.del(['foo', 'data'])
 
