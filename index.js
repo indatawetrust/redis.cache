@@ -85,7 +85,7 @@ module.exports = opts => {
 
         client.del(key, (err, response) => {
 
-          if (!err && response == 1) {
+          if (!err) {
             resolve(true)
           } else {
             reject(new Error(err))
